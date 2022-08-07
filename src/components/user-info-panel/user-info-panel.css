@@ -1,0 +1,46 @@
+.user-info-wrapper {
+    display: flex;
+    margin: 3% 30% 0 15%;
+    align-items: center;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.user-info-repos {
+    font-size: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    text-align: left;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+.user-info-repos-item {
+    width: 320px;
+    font-size: 20px;
+    margin-top: -3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+img {
+    margin-left: 25%;
+    width: 100px;
+    height: 100px;
+    border-radius: 75px;
+}
+
+.bio, .lang {
+    display: flex;
+    margin-right: 20%;
+    margin-left: 20%;
+    align-items: center;
+    justify-content: space-around;
+}
+
