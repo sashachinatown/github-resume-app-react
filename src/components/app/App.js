@@ -39,7 +39,7 @@ class App extends Component {
           // Language percentage
 
           userRepos.forEach(obj => {
-            obj.language ? languageArr.push(obj.language) : null;
+            return obj.language ? languageArr.push(obj.language) : null;
           });
 
           const languages = languageArr.reduce((acc, rec) => {
