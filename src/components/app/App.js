@@ -76,7 +76,13 @@ class App extends Component {
               topReposArr.push(sortedByStars[i])
             }
 
-            const reposToRender = topReposArr.filter(item => item).map(obj => ({name: obj.name, description: obj.description, stars: obj.stargazers_count, forks: obj.forks}));
+            const reposToRender = topReposArr.filter(item => item).map(obj => (
+              {
+                name: obj.name, 
+                description: obj.description.length > 80 ? `${obj.description.replace(/:[^:]+:/gi, '').slice(0, 80)}...` : obj.description, 
+                stars: obj.stargazers_count, 
+                forks: obj.forks
+              }));
             
             this.setState({topRepos: reposToRender});
           } else {this.setState({topRepos: ''})}
