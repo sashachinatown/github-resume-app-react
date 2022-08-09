@@ -39,7 +39,7 @@ class App extends Component {
           // Language percentage
 
           userRepos.forEach(obj => {
-              obj.language ? languageArr.push(obj.language) : null;
+            obj.language ? languageArr.push(obj.language) : null;
           });
 
           const languages = languageArr.reduce((acc, rec) => {
@@ -79,7 +79,7 @@ class App extends Component {
             const reposToRender = topReposArr.filter(item => item).map(obj => (
               {
                 name: obj.name, 
-                description: obj.description.length > 80 ? `${obj.description.replace(/:[^:]+:/gi, '').slice(0, 80)}...` : obj.description, 
+                description: obj.description?.length > 80 ? `${obj.description.replace(/:[^:]+:/gi, '').slice(0, 80)}...` : obj.description, 
                 stars: obj.stargazers_count, 
                 forks: obj.forks
               }));
